@@ -1,5 +1,5 @@
 import { usersInfo } from "@/db/schema";
-import { createDB } from "@/db/client";
+import { getDB } from "@/db/client";
 import { eq } from "drizzle-orm";
 import { handleErrorResponse } from "@/lib/utils";
 import { NextResponse } from "next/server";
@@ -8,7 +8,7 @@ export const runtime = 'edge';
 
 export async function POST(req, context) {
   try {
-    const db = createDB(context.env);
+    const db = getDB(context.env);
     const { email, password } = await req.json();
 
     if (!email || !password) {
