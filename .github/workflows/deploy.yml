@@ -22,9 +22,8 @@ jobs:
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
-          account_id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          project_name: connectnext
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: connectnext
           branch: main
-          api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          output_dir: .next
-
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          directory: .next
