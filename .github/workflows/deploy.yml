@@ -1,0 +1,30 @@
+name: Deploy Next.js to Cloudflare Pages with Workers API
+
+on:
+  push:
+    branches:
+      - main  # Trigger deployment on push to main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Next.js project
+        run: npm run build
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          account_id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          project_name: connectnext
+          branch: main
+          api_token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          output_dir: .next
+
