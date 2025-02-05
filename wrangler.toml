@@ -1,7 +1,7 @@
 # ./wrangler.toml
 
 #:schema node_modules/wrangler/config-schema.json
-name = "connectnext"
+name = "connect-nextjs-cloudflared1-drizzle-local-remote"
 compatibility_date = "2025-02-05"
 compatibility_flags = ["nodejs_compat"]
 
