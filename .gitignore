@@ -58,3 +58,4 @@ drizzle/
 drizzle.local.config.js
 # migrations/
 src/db/local-database.sqlite
+client.local.js
