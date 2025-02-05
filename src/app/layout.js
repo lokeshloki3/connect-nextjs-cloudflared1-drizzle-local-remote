@@ -1,6 +1,8 @@
 // src/app/layout.js
 import './globals.css';
 
+export const runtime = 'edge';
+
 export const metadata = {
   title: 'Connect',
   description: 'Connect',

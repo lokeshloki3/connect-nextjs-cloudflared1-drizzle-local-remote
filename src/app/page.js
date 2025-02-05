@@ -2,6 +2,8 @@
 
 import { useRouter } from "next/navigation";
 
+export const runtime = 'edge';
+
 export default function LandingPage() {
   const router = useRouter();
 
