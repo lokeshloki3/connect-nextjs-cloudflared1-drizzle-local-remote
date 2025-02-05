@@ -4,7 +4,7 @@ import { eq } from "drizzle-orm";
 import { handleErrorResponse } from "@/lib/utils";
 import { NextResponse } from "next/server";
 
-export const runtime = process.env.NODE_ENV === "production" ? "edge" : "nodejs";
+export const runtime = 'edge';
 
 export async function POST(req, context) {
   try {
