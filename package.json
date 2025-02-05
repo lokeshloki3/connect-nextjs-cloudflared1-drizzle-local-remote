@@ -16,6 +16,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "better-sqlite3": "^11.8.1",
     "cross-env": "^7.0.3",
     "dotenv": "^16.4.7",
     "drizzle-kit": "^0.30.4",

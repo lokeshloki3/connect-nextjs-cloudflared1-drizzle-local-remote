@@ -11,7 +11,7 @@ pages_build_output_dir = ".next"
 [[d1_databases]]
 binding = "DB"
 database_name = "connect"
-database_id = "0e1eccb0-9072-4ae6-bad6-8202f5b41806"
+database_id = "$CLOUDFLARE_DATABASE_ID"
 migrations_dir = "./src/db/migrations"
 
 
