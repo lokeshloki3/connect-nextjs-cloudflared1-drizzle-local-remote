@@ -3,15 +3,31 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "db:generate:dev": "drizzle-kit generate --config drizzle.local.config.js",
+    "db:generate:prod": "drizzle-kit generate --config drizzle.config.js",
+    "db:migrate:dev": "cross-env NODE_ENV=development drizzle-kit migrate --config drizzle.local.config.js",
+    "db:migrate:prod": "cross-env NODE_ENV=production drizzle-kit migrate --config drizzle.config.js",
+    "db:studio:dev": "cross-env NODE_ENV=development drizzle-kit studio --config drizzle.local.config.js",
+    "db:studio:prod": "cross-env NODE_ENV=production drizzle-kit studio --config drizzle.config.js",
+    "pages:deploy": "wrangler pages deploy .next",
+    "deploy": "npm run build && npm run pages:deploy",
+    "test": "vitest"
   },
   "dependencies": {
+    "@cloudflare/next-on-pages": "^1.13.7",
+    "better-sqlite3": "^11.8.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "drizzle-kit": "^0.30.4",
+    "drizzle-orm": "^0.39.1",
+    "next": "15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.6"
+    "wrangler": "^3.107.3"
   },
   "devDependencies": {
     "postcss": "^8",

@@ -1,0 +1,26 @@
+# ./wrangler.toml
+
+#:schema node_modules/wrangler/config-schema.json
+name = "connectnext"
+compatibility_date = "2025-02-05"
+compatibility_flags = ["nodejs_compat"]
+
+# Set the build output directory for Cloudflare Pages
+pages_build_output_dir = ".next"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "connect"
+database_id = "$CLOUDFLARE_DATABASE_ID"
+migrations_dir = "./src/db/migrations"
+
+
+# Cloudflare API credentials (Set in GitHub Actions)
+CLOUDFLARE_ACCOUNT_ID = "$CLOUDFLARE_ACCOUNT_ID"
+CLOUDFLARE_API_TOKEN = "$CLOUDFLARE_API_TOKEN"
+
+# Workers Logs
+# Docs: https://developers.cloudflare.com/workers/observability/logs/workers-logs/
+# Configuration: https://developers.cloudflare.com/workers/observability/logs/workers-logs/#enable-workers-logs
+[observability]
+enabled = true

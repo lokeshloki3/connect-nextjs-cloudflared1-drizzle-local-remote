@@ -16,9 +16,15 @@
 # next.js
 /.next/
 /out/
+.next/
+out/
 
 # production
 /build
+
+# Cloudflare Pages & Wrangler
+.cloudflare/
+.wrangler/
 
 # misc
 .DS_Store
@@ -32,6 +38,8 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+wrangler.toml.development
+wrangler.toml.production
 
 # vercel
 .vercel
@@ -39,3 +47,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.cache/
+.next/cache/
+node_modules/
+
+# Drizzle ORM build & migrations
+drizzle/
+# drizzle.config.js
+drizzle.local.config.js
+# migrations/
+src/db/local-database.sqlite
