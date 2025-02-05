@@ -16,8 +16,8 @@ migrations_dir = "./src/db/migrations"
 
 
 # Cloudflare API credentials (Set in GitHub Actions)
-CLOUDFLARE_ACCOUNT_ID = "$CLOUDFLARE_ACCOUNT_ID"
-CLOUDFLARE_API_TOKEN = "$CLOUDFLARE_API_TOKEN"
+# CLOUDFLARE_ACCOUNT_ID = "$CLOUDFLARE_ACCOUNT_ID"
+# CLOUDFLARE_API_TOKEN = "$CLOUDFLARE_API_TOKEN"
 
 # Workers Logs
 # Docs: https://developers.cloudflare.com/workers/observability/logs/workers-logs/
