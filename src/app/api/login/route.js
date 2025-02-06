@@ -9,8 +9,7 @@ export const runtime = 'edge';
 
 export async function POST(req, context) {
   try {
-    const dbBinding = req.context.DB;
-    const db = getDB(dbBinding);
+    const db = getDB();
     // const db = getDB(context.env);
     // const db = createDB(context.env);  //Local
     const { email, password } = await req.json();
